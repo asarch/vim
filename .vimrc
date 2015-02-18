@@ -51,6 +51,9 @@ if has("gui_running")
 	" Color scheme for Perl code
 	autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme desert
 
+	" Color scheme for Perl code
+	autocmd BufNewFile,BufEnter *.xml,*.sgml,*.html,*.xhtml colorscheme slate
+
 	" Color scheme for Pascal code
 	"autocmd BufNewFile,BufEnter *.pas colorscheme darkblue
 
