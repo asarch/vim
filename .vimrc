@@ -1,29 +1,33 @@
 " Vundle
-set nocompatible               " be iMproved
-filetype off                   " required!
+" set nocompatible " be iMproved
+" filetype off " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/vundle'
 
 " Insert Bundles here:
 " Chilicuil's Sprunge Bundle
-Bundle 'chilicuil/vim-sprunge'
+" Bundle 'chilicuil/vim-sprunge'
 
 " Global options
 set nocompatible
 set autoindent
 "set cursorline
+set copyindent
 set equalalways
 "set formatoptions=tcroql
 set history=1024
+set modeline
+set mouse=a
 set nobackup
+set noexpandtab
 set nowrap
 set number
-set mouse=a
+set preserveindent
 set ruler
 set showmode
 set showcmd
