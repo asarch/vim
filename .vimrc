@@ -71,6 +71,12 @@ if has("gui_running")
 
 	" Change the font style
 	set guifont=Monospace\ 11
+else
+	" Color scheme for editing Python code in xterm
+	autocmd BufNewFile,BufEnter *.py colorscheme desert
+
+	" Color scheme for Perl code
+	autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme default
 endif
 
 " Remember last position 
