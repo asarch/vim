@@ -56,7 +56,7 @@ if has("gui_running")
 	autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme desert
 
 	" Color scheme for SGML-based languages
-	autocmd BufNewFile,BufEnter *.xml,*.sgml,*.html,*.xhtml colorscheme slate
+	"autocmd BufNewFile,BufEnter *.xml,*.sgml,*.html,*.xhtml colorscheme slate
 
 	" Color scheme for Pascal code
 	"autocmd BufNewFile,BufEnter *.pas colorscheme darkblue
