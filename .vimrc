@@ -1,9 +1,9 @@
 " Vundle
-" set nocompatible " be iMproved
-" filetype off " required!
+"set nocompatible " be iMproved
+"filetype off " required!
 
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
@@ -16,10 +16,10 @@
 " Global options
 set nocompatible
 set autoindent
-"set cursorline
+set backspace=indent,eol,start
 set copyindent
 set equalalways
-"set formatoptions=tcroql
+set formatoptions=tcroql
 set history=1024
 set modeline
 set mouse=a
@@ -85,3 +85,15 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Sessions
 "set sessionoptions+="blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winpos,winsize"
+
+" En el archivo ~/.vim/after/ftplugin/python.vim
+" agrega las siguientes opciones para ignorar las
+" opciones definidas por el PEP8 de Python:
+"
+" Options to override PEP8 settings from:
+" /usr/local/share/vim/vim74/ftplugin/python.vim
+"
+" setl noexpandtab
+" setl shiftwidth=8
+" setl softtabstop=0
+" setl tabstop=8
