@@ -43,7 +43,7 @@ syntax on
 " map <f5> :!perl "%"<CR>
 
 " GJS launcher
-map <f5> :!GS_PATH=`pwd` gjs "%"<CR>
+map <f5> :!GJS_PATH=`pwd` gjs "%"<CR>
 
 " Fullscreen window
 " From: http://superuser.com/questions/264693/how-can-i-open-gvim-in-full-screen-mode-in-gnome
