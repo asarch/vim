@@ -57,7 +57,10 @@ if has("gui_running")
 
 	" Color scheme for Perl code
 	autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme desert
-
+	
+	" Color scheme for JavaScript
+	autocmd BufNewFile,BufEnter *.js,*.JS colorscheme slate
+	
 	" Color scheme for SGML-based languages
 	"autocmd BufNewFile,BufEnter *.xml,*.sgml,*.html,*.xhtml colorscheme slate
 
