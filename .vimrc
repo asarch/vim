@@ -103,3 +103,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " setl shiftwidth=8
 " setl softtabstop=0
 " setl tabstop=8
+
+" Cambiamos las tabulaciones y su identación de 8 con tabs a 2 con espacios para
+" el código fuente de JavaScript:
+" From: https://mononeurona.slack.com/team/U5N3XJ6RX
+autcmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
