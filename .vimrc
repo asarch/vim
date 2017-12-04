@@ -58,9 +58,6 @@ if has("gui_running")
 	" Color scheme for Perl code
 	autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme desert
 	
-	" Color scheme for JavaScript
-	autocmd BufNewFile,BufEnter *.js,*.JS colorscheme slate
-	
 	" Color scheme for SGML-based languages
 	"autocmd BufNewFile,BufEnter *.xml,*.sgml,*.html,*.xhtml colorscheme slate
 
@@ -108,3 +105,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " el código fuente de JavaScript:
 " From: https://mononeurona.slack.com/team/U5N3XJ6RX
 autcmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
+
+" Color scheme for JavaScript
+autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
