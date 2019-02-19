@@ -84,7 +84,7 @@ endif
 
 " Remember last position 
 " From :help last-position-jump
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Sessions
 "set sessionoptions+="blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages,winpos,winsize"
@@ -104,7 +104,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Cambiamos las tabulaciones y su identación de 8 con tabs a 2 con espacios para
 " el código fuente de JavaScript:
 " From: https://mononeurona.slack.com/team/U5N3XJ6RX
-autcmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
+autocmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
 
 " Color scheme for JavaScript
 autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
