@@ -104,7 +104,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " Cambiamos las tabulaciones y su identación de 8 con tabs a 2 con espacios para
 " el código fuente de JavaScript:
 " From: https://mononeurona.slack.com/team/U5N3XJ6RX
-autocmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
+"autocmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
 
 " Color scheme for JavaScript
-autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
+"autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
+autocmd BufNewFile,BufEnter *.js,*.JS colorscheme evening
