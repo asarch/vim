@@ -32,6 +32,8 @@ set ruler
 set showmode
 set showcmd
 set undolevels=1024
+set cursorline
+set autoread
 
 " Auto indent on C comments
 filetype plugin indent on
@@ -42,16 +44,17 @@ syntax on
 " Perl runner
 " map <f5> :!perl "%"<CR>
 
+" Python runner
+map <f5> :!python3.9 "%"<CR>
+
 " GJS launcher
-map <f5> :!GJS_PATH=`pwd` gjs "%"<CR>
+" map <f5> :!GJS_PATH=`pwd` gjs "%"<CR>
 
 " Fullscreen window
 " From: http://superuser.com/questions/264693/how-can-i-open-gvim-in-full-screen-mode-in-gnome
 " map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
 if has("gui_running")
-	set cursorline
-
 	" Color scheme for C/C++ source code
 	"autocmd BufNewFile,BufEnter *.c,*.h,*.cpp colorscheme darkblue
 
@@ -65,15 +68,25 @@ if has("gui_running")
 	"autocmd BufNewFile,BufEnter *.pas colorscheme darkblue
 
 	" Color scheme for Python code
-	"autocmd BufNewFile,BufEnter *.py colorscheme morning
-	"autocmd BufNewFile,BufEnter *.py colorscheme python
-	"autocmd BufNewFile,BufEnter *.py colorscheme darkblue
+	" autocmd BufNewFile,BufEnter *.py colorscheme morning
+	" autocmd BufNewFile,BufEnter *.py colorscheme python
+	" autocmd BufNewFile,BufEnter *.py colorscheme darkblue
+	autocmd BufNewFile,BufEnter *.py colorscheme evening
+	"
+	" Color Scheme for Lisp
+	autocmd BufNewFile,BufEnter *.lisp colorscheme evening 
+	"autocmd BufNewFile,BufEnter *.lisp colorscheme  slate
+
+	" Color scheme for SQL
+	autocmd BufNewFile,BufEnter *.sql colorscheme anokha
+	"autocmd BufNewFile,BufEnter *.sql colorscheme breeze
 
 	" De Chilicuil. Para editar los archivo de Pascal
 	" autocmd BufNewFile,BufEnter *.pas shiftwidt=2
 
 	" Change the font style
-	set guifont=Monospace\ 11
+	" set guifont=Monospace\ 11
+	" set guifont=LiberationMono\ 11
 else
 	" Color scheme for editing Python code in xterm
 	autocmd BufNewFile,BufEnter *.py colorscheme desert
@@ -106,6 +119,11 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 " From: https://mononeurona.slack.com/team/U5N3XJ6RX
 "autocmd BufNewFile,BufEnter *.js set softtabstop=2 | set shiftwidth=2
 
+" Las nuevas versiones de psql no aceptan al tabulador, se cambian a espacios
+autocmd BufNewFile,BufEnter *.sql set softtabstop=4 | set shiftwidth=4
+
 " Color scheme for JavaScript
 "autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
-autocmd BufNewFile,BufEnter *.js,*.JS colorscheme evening
+"autocmd BufNewFile,BufEnter *.js,*.JS colorscheme evening
+autocmd BufNewFile,BufEnter *.js,*.JS colorscheme anokha
+autocmd BufNewFile,BufEnter *.st,*.ST colorscheme anokha
