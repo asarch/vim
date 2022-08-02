@@ -34,6 +34,7 @@ set showcmd
 set undolevels=1024
 set cursorline
 set autoread
+set nowrapscan
 
 " Auto indent on C comments
 filetype plugin indent on
@@ -71,14 +72,14 @@ if has("gui_running")
 	" autocmd BufNewFile,BufEnter *.py colorscheme morning
 	" autocmd BufNewFile,BufEnter *.py colorscheme python
 	" autocmd BufNewFile,BufEnter *.py colorscheme darkblue
-	autocmd BufNewFile,BufEnter *.py colorscheme evening
+	"autocmd BufNewFile,BufEnter *.py colorscheme evening
 	"
 	" Color Scheme for Lisp
-	autocmd BufNewFile,BufEnter *.lisp colorscheme evening 
-	"autocmd BufNewFile,BufEnter *.lisp colorscheme  slate
+	" autocmd BufNewFile,BufEnter *.lisp colorscheme evening 
+	" autocmd BufNewFile,BufEnter *.lisp colorscheme  slate
 
 	" Color scheme for SQL
-	autocmd BufNewFile,BufEnter *.sql colorscheme anokha
+	" autocmd BufNewFile,BufEnter *.sql colorscheme anokha
 	"autocmd BufNewFile,BufEnter *.sql colorscheme breeze
 
 	" De Chilicuil. Para editar los archivo de Pascal
@@ -89,10 +90,10 @@ if has("gui_running")
 	" set guifont=LiberationMono\ 11
 else
 	" Color scheme for editing Python code in xterm
-	autocmd BufNewFile,BufEnter *.py colorscheme desert
+	" autocmd BufNewFile,BufEnter *.py colorscheme desert
 
 	" Color scheme for Perl code
-	autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme default
+	" autocmd BufNewFile,BufEnter *.pl,*.pm,*.PL colorscheme default
 endif
 
 " Remember last position 
@@ -123,7 +124,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 autocmd BufNewFile,BufEnter *.sql set softtabstop=4 | set shiftwidth=4
 
 " Color scheme for JavaScript
-"autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
-"autocmd BufNewFile,BufEnter *.js,*.JS colorscheme evening
-autocmd BufNewFile,BufEnter *.js,*.JS colorscheme anokha
-autocmd BufNewFile,BufEnter *.st,*.ST colorscheme anokha
+" autocmd BufNewFile,BufEnter *.js,*.JS colorscheme torte
+" autocmd BufNewFile,BufEnter *.js,*.JS colorscheme evening
+" autocmd BufNewFile,BufEnter *.js,*.JS colorscheme anokha
+" autocmd BufNewFile,BufEnter *.st,*.ST colorscheme anokha
